@@ -1,0 +1,823 @@
+
+/* ===== ESTILOS BASE ===== */
+
+/* Fuente base y reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f9f9fb;
+    color: #2d2d2d;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #4B3F72;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #6C63FF;
+}
+
+/* ===== ESTRUCTURA PRINCIPAL ===== */
+main.admin-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+
+
+/* ===== PESTAÑAS DE NAVEGACIÓN ===== */
+.admin-tabs-wrapper {
+    background-color: #fafafa;
+    padding: 0.5rem 1rem;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    margin-bottom: 2rem;
+}
+
+.admin-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.admin-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.admin-tabs a {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.admin-tabs a:hover {
+    color: #222;
+    border-bottom: 3px solid #ccc;
+}
+
+.admin-tabs a.activo {
+    color: #2c2c2c;
+    border-bottom: 3px solid #5c6bc0;
+    font-weight: 600;
+    background-color: rgba(92, 107, 192, 0.05);
+    border-radius: 6px 6px 0 0;
+}
+
+/* Título */
+.admin-box h2 {
+    font-family: 'Proza Libre', serif;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #444;
+    text-align: center;
+}
+
+.grupo-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.formulario-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.formulario-filtros input,
+.formulario-filtros select,
+.formulario-filtros button {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    height: auto;
+    min-height: 2.2rem;
+    box-sizing: border-box;
+}
+
+.formulario-filtros input[type="text"],
+.formulario-filtros select {
+    flex: 1 1 120px;
+    min-width: 100px;
+    max-width: 100%;
+    width: auto;
+}
+.formulario-filtros button {
+    /*background-color: #8A5CFF;*/
+    color: white;
+    cursor: pointer;
+}
+
+.formulario-filtros .boton-limpiar {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.formulario-filtros .boton-limpiar:hover {
+    background-color: #d5d5d5;
+}
+
+/* Tabla */
+.tabla-admin table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tabla-admin th,
+  .tabla-admin td {
+      text-align: left;
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      vertical-align: middle;
+      text-align: center;
+  }
+  
+  .tabla-admin th {
+    background-color: #e5e2f9;
+    font-weight: 700;
+    color: #2d2d2d;
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+  
+.tabla-admin tbody tr:nth-child(even) {
+    background-color: #f9f7fd;
+}
+  
+  .tabla-admin td form {
+    display: inline-block;
+    margin: 2px 0;
+  }
+  
+  .tabla-admin select,
+  .tabla-admin button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .tabla-admin button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+  
+  .tabla-admin select {
+    max-width: 140px;
+  }
+
+  .tabla-admin tbody tr:hover {
+    background-color: #f3f0fc;
+}
+
+.tabla-admin td a {
+    color: #473080;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.tabla-admin td a:hover {
+    text-decoration: underline;
+}
+
+.tabla-admin td button {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+  
+.btn-aprobar {
+    background-color: #e3f6e1;
+    color: #2f7a42;
+    border: 1px solid #b4e0c2;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-rechazar {
+    background-color: #fde4e4;
+    color: #b32d2d;
+    border: 1px solid #e7b6b6;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-aprobar:hover {
+    background-color: #d2eed2;
+}
+
+.btn-rechazar:hover {
+    background-color: #fcd2d2;
+}
+
+
+/* Link volver */
+.volver-link {
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-weight: bold;
+    color: #8A5CFF;
+}
+
+/* ===== CONFIGURACIÓN ===== */
+
+
+.form-configuracion {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-configuracion button[type="submit"] {
+    background-color: #8A5CFF;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+    display: block;
+}
+
+.form-configuracion button[type="submit"]:hover {
+    background-color: #554dcd;
+}
+
+.config-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ===== FILTROS ===== */
+
+
+.botones-filtro {
+    display: flex;
+    gap: 1rem;
+    grid-column: span 2; /* Ocupa más espacio horizontal */
+    justify-content: flex-start;
+    margin-left: auto;
+}
+
+.botones-filtro button,
+.botones-filtro .btn-limpiar {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    border-radius: 5px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.botones-filtro button {
+    background-color: #8A5CFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botones-filtro button:hover {
+    background-color: #9576e2;
+}
+
+.botones-filtro .btn-limpiar {
+    background-color: #e0e0e0;
+    color: #333;
+    border: 1px solid #bbb;
+    transition: background-color 0.3s ease;
+}
+.botones-filtro .btn-limpiar:hover {
+    background-color: #d5d5d5;
+}
+
+.formulario-filtros input,
+.formulario-filtros select {
+    min-height: 2.4rem; /* = aprox. 38px pero flexible */
+    height: auto;
+    line-height: 1.2;
+}
+.botones-filtro a.btn-limpiar {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem; /* conservamos padding horizontal */
+}
+
+.formulario-filtros .botones-filtro {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    margin-left: auto; /* esto lo empuja a la derecha */
+}
+.formulario-filtros .botones-filtro button,
+.formulario-filtros .botones-filtro .btn-limpiar {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 2.2rem;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+}
+
+.formulario-filtros .botones-filtro .btn-limpiar {
+    background-color: #e0e0e0;
+    color: #333;
+    border: 1px solid #999;
+}
+
+
+
+.filtro-dropdown {
+    position: relative;
+    display: inline-block;
+    /*width: 180px;*/
+    font-size: 0.95rem;
+    border: none; 
+  }
+  
+  .dropdown-titulo {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+
+    height: 38px; /* Fijar el alto para que no se expanda */
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+
+  }
+  
+  .dropdown-opciones {
+    
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .dropdown-opciones label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .filtro-dropdown.abierto .dropdown-opciones {
+    display: block;
+  }
+
+  .dropdown-opciones input[type="checkbox"] {
+    flex-shrink: 0;
+    accent-color: #8A5CFF;
+    margin: 0;
+  }
+  
+  .flecha {
+    float: right;
+    font-size: 0.75rem;
+  }
+  
+  .filtro-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 8px;
+    max-height: 180px; /* para que no sea infinito */
+    overflow-y: auto;
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+  
+  .filtro-checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  
+  .filtro-checkbox-group input[type="checkbox"] {
+    accent-color: #8A5CFF;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .acciones-masivas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.acciones-masivas select {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 220px;
+}
+
+.acciones-masivas button {
+    background-color: #8A5CFF;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.acciones-masivas button:hover {
+    background-color: #6b40e0;
+}
+
+.acciones-izquierda,
+.acciones-derecha {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.acciones-izquierda select,
+.acciones-derecha select {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    color: #333;
+}
+
+.acciones-derecha button {
+    background-color: #8A5CFF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.acciones-derecha button:hover {
+    background-color: #6b40e0;
+}
+
+/* ===== COMPONENTES REUTILIZABLES ===== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .config-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+.config-item label:first-child {
+    font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: 1rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #8A5CFF;
+}
+
+.switch input:not(:checked):hover + .slider {
+    background-color: #bbb;
+}
+
+.switch input:checked:hover + .slider {
+    background-color: #554dcd;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+.limite-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+}
+
+.form-limite {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+}
+
+.form-limite label {
+    font-weight: 600;
+    color: #444;
+}
+
+.form-limite select {
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.formulario-filtros button,
+.botones-filtro button,
+.acciones-masivas button,
+.acciones-derecha button {
+  background-color: #8A5CFF;
+}
+
+.botones-filtro button:hover,
+.acciones-masivas button:hover,
+.acciones-derecha button:hover {
+  background-color: #9576e2;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #323232;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    opacity: 0.95;
+    font-size: 0.9rem;
+    z-index: 1000;
+    animation: fadeOut 3s forwards;
+}
+
+.toast.error {
+    background-color: #c0392b;
+}
+
+.toast.success {
+    background-color: #27ae60;
+}
+
+@keyframes fadeOut {
+    0%   { opacity: 0.95; }
+    80%  { opacity: 0.95; }
+    100% { opacity: 0; transform: translateY(10px); }
+}
+/* OCULTAR EN MEDIANA: 769px a 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tabla-admin th.col-oculta-mediana,
+    .tabla-admin td.col-oculta-mediana {
+      display: none;
+    }
+  }
+  
+  /* OCULTAR EN TABLETAS Y MÓVILES: <= 768px */
+  @media (max-width: 768px) {
+    .tabla-admin th.col-oculta-tableta,
+    .tabla-admin td.col-oculta-tableta,
+    .tabla-admin th.col-oculta-mediana,
+    .tabla-admin td.col-oculta-mediana {
+      display: none;
+    }
+  
+    .acciones-masivas,
+    .panel-controles-superiores {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .acciones-derecha,
+    .acciones-izquierda {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .formulario-filtros {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .formulario-filtros input,
+    .formulario-filtros select,
+    .formulario-filtros button {
+      flex: none !important;
+      height: auto !important;
+      min-height: 2rem !important;
+      max-height: 3rem;
+    }
+  }
+  
+  /* OCULTAR SOLO EN CELULARES: <= 600px */
+  @media (max-width: 600px) {
+    .tabla-admin th.col-oculta-movil,
+    .tabla-admin td.col-oculta-movil,
+    .tabla-admin th.col-oculta-tableta,
+    .tabla-admin td.col-oculta-tableta,
+    .tabla-admin th.col-oculta-mediana,
+    .tabla-admin td.col-oculta-mediana {
+      display: none !important;
+    }
+  
+    /* Otros ajustes opcionales */
+    body {
+      padding: 1rem;
+    }
+  
+    .admin-box h2 {
+      font-size: 1.6rem;
+    }
+  
+    .admin-tabs {
+      font-size: 0.85rem;
+      gap: 0.3rem;
+    }
+  
+    .formulario-filtros,
+    .acciones-masivas,
+    .config-item {
+      flex-direction: column;
+      padding: 1rem;
+      align-items: stretch;
+    }
+  
+    .formulario-filtros input,
+    .formulario-filtros select,
+    .formulario-filtros button,
+    .botones-filtro button,
+    .botones-filtro .btn-limpiar {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box;
+    }
+  
+    .tabla-admin th,
+    .tabla-admin td {
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  
+    .acciones-izquierda,
+    .acciones-derecha {
+      width: 100%;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .dropdown-titulo {
+      width: 100%;
+    }
+  }
