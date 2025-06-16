@@ -54,7 +54,7 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
-  color:rgb(30, 20, 90);
+  color: rgb(30, 20, 90);
 }
 
 .hero-letrachica {
@@ -104,6 +104,7 @@
   color: rgb(30, 20, 90);
   transition: all 0.2s ease-in-out;
 }
+
 .hero-btn-registro:hover {
   color: rgb(138, 92, 255);
   transition: all 0.2s ease-in-out;
@@ -178,7 +179,7 @@ button {
   font-size: 2rem;
   text-align: center;
   margin: 0;
-  color:rgb(30, 20, 90);
+  color: rgb(30, 20, 90);
 }
 
 .subtitle-busqueda {
@@ -195,7 +196,7 @@ button {
   padding: 10px;
   border: none;
   border-radius: 25px;
-  background-color:rgba(72, 0, 255, 0.1);
+  background-color: rgba(72, 0, 255, 0.1);
 }
 
 .input-busqueda:focus {
@@ -413,7 +414,7 @@ button {
   /*flex-grow: 1;*/
 }
 
-.trabajo-card-contenido > :last-child {
+.trabajo-card-contenido> :last-child {
   margin-bottom: 0;
 }
 
@@ -458,6 +459,7 @@ button {
 }
 
 .trabajo-card-footer {
+  margin-top: auto;
   padding: 0.7rem 1.2rem;
   background-color: #f9f9f9;
   border-top: 1px dashed #eee;
@@ -473,6 +475,7 @@ button {
   color: #2e7d32;
   font-weight: 600;
 }
+
 .estado-finalizada {
   color: #c62828;
   font-weight: 600;
@@ -552,7 +555,8 @@ button {
   width: fit-content;
   align-self: flex-start;
   margin-top: 0;
-  vertical-align: middle; /* asegurar alineación */
+  vertical-align: middle;
+  /* asegurar alineación */
 }
 
 
@@ -575,16 +579,18 @@ button {
 
 .mensaje-vacio {
   max-width: 600px;
-  margin: 4rem auto; /* centra horizontalmente */
+  margin: 4rem auto;
+  /* centra horizontalmente */
   padding: 2rem;
   margin-top: 0;
   background-color: #f9f9f9;
   border: 2px dashed #ccc;
   border-radius: 8px;
-  text-align: center; /* centra el texto */
+  text-align: center;
+  /* centra el texto */
   font-size: 1.2rem;
   color: #444;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .mensaje-vacio p {
@@ -604,19 +610,24 @@ button {
 .mensaje-vacio .btn-volver:hover {
   background-color: #286090;
 }
+
 .card-overlay-link {
   position: absolute;
   inset: 0;
   z-index: 1;
   text-indent: -9999px;
 }
+
 .trabajo-card {
-  position: relative; /* Necesario para que .card-overlay-link se posicione bien */
+  position: relative;
+  /* Necesario para que .card-overlay-link se posicione bien */
 }
+
 .trabajo-card-footer a,
 .trabajo-card-actions a {
   position: relative;
-  z-index: 2; /* Se aseguran de estar encima del link invisible */
+  z-index: 2;
+  /* Se aseguran de estar encima del link invisible */
 }
 
 /* === MEDIA QUERIES === */
@@ -674,7 +685,7 @@ button {
   .green-circle {
     display: none;
   }
-  
+
   .green-circle2 {
     display: none;
   }
